@@ -11,6 +11,11 @@ cask "cloudflare-status-bar" do
 
   app "CloudflareStatusBar.app"
 
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-cr", "#{appdir}/CloudflareStatusBar.app"]
+  end
+
   zap trash: [
     "~/Library/Preferences/com.cloudflare.statusbar.plist",
   ]

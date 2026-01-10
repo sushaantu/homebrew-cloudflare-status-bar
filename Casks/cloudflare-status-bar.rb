@@ -1,6 +1,6 @@
 cask "cloudflare-status-bar" do
   version "1.2.0"
-  sha256 "ff6bbdcc87611c5449a4979791a27b497c5b12b957e8cfbc5c3d16e8a9dfcfd9"
+  sha256 "07debd7848b506e3b5b41a0b2caae0beec1ccbe97d9f15ef381e90a62c263b67"
 
   url "https://github.com/sushaantu/CloudflareStatusBar/releases/download/v#{version}/CloudflareStatusBar.zip"
   name "Cloudflare Status Bar"
@@ -10,11 +10,6 @@ cask "cloudflare-status-bar" do
   depends_on macos: ">= :ventura"
 
   app "CloudflareStatusBar.app"
-
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-cr", "#{appdir}/CloudflareStatusBar.app"]
-  end
 
   zap trash: [
     "~/Library/Preferences/com.cloudflare.statusbar.plist",

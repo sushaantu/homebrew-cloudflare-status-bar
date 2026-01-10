@@ -1,6 +1,6 @@
 cask "cloudflare-status-bar" do
-  version "1.2.0"
-  sha256 "07debd7848b506e3b5b41a0b2caae0beec1ccbe97d9f15ef381e90a62c263b67"
+  version "1.2.1"
+  sha256 "eda22a1e5418fad0cc8c387bd139d35e7b3af3512c070ed9a19d67059685dce4"
 
   url "https://github.com/sushaantu/CloudflareStatusBar/releases/download/v#{version}/CloudflareStatusBar.zip"
   name "Cloudflare Status Bar"
